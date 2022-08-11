@@ -15,3 +15,23 @@ ex07-
 cat etc/passwd | sed '/^#/d' | awk '{ if(NR % 2 == 0) print }' | cut -d ":" -f1 | rev | sort | awk ' 'NR==$FT_LINE1,NR==$FT_LINE2' { print }' | sed 's/$/,/g' | tr "\n" " " | sed 's/\(.*\), /\1./'
 
 ex08-
+
+FT_NBR2=mrdoc
+
+juan@juan-VirtualBox:~$ str1='\'
+
+juan@juan-VirtualBox:~$ str1="'"
+
+juan@juan-VirtualBox:~$ str2='\"?!'
+
+juan@juan-VirtualBox:~$ FT_NBR1=$str1$str2
+
+juan@juan-VirtualBox:~$ echo $FT_NBR1
+
+'\"?!
+
+juan@juan-VirtualBox:~$ echo "obase=13;ibase=5;" $FT_NBR1 + $FT_NBR2 | tr "\'" '0' | tr '\\\"\?\!mrdoc' "123401234" | sed 's/3/o/' | bc | tr '0123456789ABC' 'gtaio\ luSnemf'
+
+aim
+
+
