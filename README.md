@@ -1,2 +1,4 @@
 # hello-world
-Hello-world repository for Git Tutorial
+
+
+SOLO MIRA NO SE COMO SE MANEJA
